@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ✅ 모바일 대응 -->
     <title>나의 소개 홈페이지</title>
     <style>
         body {
@@ -22,20 +23,26 @@
 
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 2rem;
+            /* ✅ 모바일에서 너무 크지 않게 */
         }
 
         nav {
             background: #333;
             padding: 10px;
             text-align: center;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            /* ✅ 줄바꿈 가능하게 */
         }
 
         nav a {
             color: white;
-            margin: 0 15px;
+            margin: 5px 10px;
             text-decoration: none;
             font-weight: bold;
+            font-size: 1rem;
         }
 
         nav a:hover {
@@ -44,7 +51,7 @@
 
         section {
             max-width: 800px;
-            margin: 30px auto;
+            margin: 20px auto;
             background: white;
             padding: 20px;
             border-radius: 15px;
@@ -53,6 +60,20 @@
 
         section h2 {
             color: #4a90e2;
+            font-size: 1.5rem;
+        }
+
+        section p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        section img {
+            max-width: 100%;
+            /* ✅ 화면 크기에 맞게 */
+            height: auto;
+            border-radius: 10px;
+            margin-top: 10px;
         }
 
         footer {
@@ -61,6 +82,7 @@
             background: #333;
             color: white;
             margin-top: 30px;
+            font-size: 0.9rem;
         }
     </style>
 </head>
@@ -87,7 +109,7 @@
         <h2>🎮 취미</h2>
         <p>제가 좋아하는 취미는 게임하기, 친구들과 놀기, 새로운 것 배우기입니다.</p>
         <div>
-            <img src="./이미지01.avif">
+            <img src="./이미지01.avif" alt="취미 이미지">
         </div>
     </section>
 
